@@ -3,79 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 1</title>
+
+    <title>Jason Huynh Le</title>
+
     <style>
-        strong {
-            color: rgb(133, 177, 237);
-            background-color: yellow;
+        * {
+            box-sizing: border-box;
         }
-        em {
-            color:purple;
+
+        body {
+            margin: 0;
+            padding: 16px;
+            background-color: #06121c;
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .page {
+            display: block;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #091923;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            min-height: 170px;
+            padding: 30px;
+            background-color: #0b3045;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 4px solid #20c9c5;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0 0 12px;
+            color: white;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            display: block;
+            color: #70e5df;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .location {
+            display: inline-flex;
+            margin-top: 12px;
+            padding: 5px 12px;
+            color: #06121c;
+            background-color: #70e5df;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Profile image */
+        .profile-section {
+            display: flex;
+            padding: 25px 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-link {
+            display: inline-block;
+            width: 45%;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        .profile-image {
+            display: block;
+            width: 350px;
+            max-height: 350px;
+            margin: 0 auto;
+            object-fit: cover;
+            border: 3px solid #20c9c5;
+            box-shadow:
+                0 0 8px #20c9c5,
+                0 0 18px rgba(32, 201, 197, 0.5);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 12px;
+            color: #a7dedb;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        /* Information layout */
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .information-box {
+            display: block;
+            width: 50%;
+            min-height: 230px;
+            padding: 28px 22px;
+        }
+
+        .information-box h2 {
+            margin: 0 0 16px;
+            font-size: 20px;
+        }
+
+        .information-box p {
+            margin: 0 0 12px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .about {
+            color: #082331;
+            background-color: #dff8f5;
+        }
+
+        .education {
+            color: white;
+            background-color: #143a4e;
+        }
+
+        .technology {
+            color: #082331;
+            background-color: #bcebe8;
+        }
+
+        .activities {
+            color: white;
+            background-color: #102c3d;
+        }
+
+        .education h2,
+        .activities h2 {
+            color: #70e5df;
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 2px;
+            color: #078d8a;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .education .label,
+        .activities .label {
+            color: #70e5df;
+        }
+
+        .skill {
+            display: inline-flex;
+            margin: 4px 3px;
+            padding: 5px 10px;
+            color: white;
+            background-color: #087d82;
+            border-radius: 14px;
+            font-size: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            min-height: 145px;
+            padding: 25px;
+            background-color: #0b5965;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-top: 4px solid #20c9c5;
+        }
+
+        .footer h2 {
+            margin: 0 0 12px;
+            color: #8ff5ef;
+            font-size: 20px;
+        }
+
+        .footer p {
+            margin: 6px;
+            font-size: 13px;
+        }
+
+        .footer a {
+            display: inline;
+            color: white;
+        }
+
+        .footer a:hover {
+            color: #8ff5ef;
+        }
+
+        @media (max-width: 700px) {
+            .information-box {
+                width: 100%;
+            }
+
+            .profile-link {
+                width: 85%;
+                min-width: 0;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>My Favorite Planet</h1>
+    <div class="page">
 
-    <h2>Mars</h2>
+        <div class="header">
+            <div class="header-content">
+                <h1>Jason Huynh Le</h1>
 
-    <p>
-        Mars is the <b>fourth</b> planet from the Sun.
-    </p>
+                <span class="subtitle">
+                    Exchange Student from the Netherlands
+                </span>
 
-    <p>
-        I think Mars is <i>one of the most interesting planets</i>
-        in our solar system.
-    </p>
+                <span class="location">
+                    Rotterdam · Mainz · Taipei
+                </span>
+            </div>
+        </div>
 
-    <hr>
+        <div class="profile-section">
+            <a class="profile-link"
+               href="https://www.linkedin.com/in/jason-huynh-le"
+               target="_blank"
+               rel="noopener noreferrer">
 
-    <h3>Some Facts</h3>
+                <img class="profile-image"
+                     src="./picture3.png"
+                     alt="Photo of Jason Huynh Le">
+            </a>
 
-    <p>
-        <strong>Mars</strong> has 2 moons:<br>
-        Phobos<br>
-        Deimos
-    </p>
+            <span class="image-caption">
+                Click the image to visit my LinkedIn profile.
+            </span>
+        </div>
 
-    <p>
-        The average distance from Mars to the Sun is about
-        2.28 &times; 10<sup>8</sup> km.
-    </p>
+        <div class="information">
 
-    <p>
-        Water is H<sub>2</sub>O.
-    </p>
+            <div class="information-box about">
+                <h2>About Me</h2>
 
-    <hr>
+                <p>
+                    My name is Jason. I am Vietnamese, but I was born
+                    and raised in the Netherlands.
+                </p>
 
-    <h3>Why I Like Mars</h3>
+                <p>
+                    I am currently taking part in an exchange program at
+                    National Taipei University of Technology, also known
+                    as Taipei Tech or NTUT.
+                </p>
 
-    <p>
-        Mars is cold and dry,<br>
-        but scientists are still exploring it.
-    </p>
+                <p>
+                    I speak Dutch, English and Vietnamese, and I am
+                    currently trying to learn basic Chinese.
+                </p>
+            </div>
 
-    <p>
-        <b>Maybe humans will visit Mars one day!</b>
-    </p>
+            <div class="information-box education">
+                <h2>Education & Experience</h2>
 
-    <hr>
+                <p>
+                    <span class="label">Current studies</span>
+                    Computer Engineering at Rotterdam University of
+                    Applied Sciences.
+                </p>
 
-    <h3>Keep Exploring</h3>
+                <p>
+                    <span class="label">Exchange program</span>
+                    National Taipei University of Technology in Taipei,
+                    Taiwan.
+                </p>
 
-    <p>
-        <b>Remember:</b> science begins with curiosity.
-    </p>
+                <p>
+                    <span class="label">International internship</span>
+                    I completed an internship in Mainz, Germany, where I
+                    gained experience working in an international environment.
+                </p>
+            </div>
 
-    <p>
-        I <em>really</em> want to see humans explore Mars in the future.
-    </p>
+            <div class="information-box technology">
+                <h2>Technology & Skills</h2>
 
-    <p>
-        <abbr title="National Aeronautics and Space Administration">NASA</abbr>
-        has sent many missions to study Mars.
-    </p>
+                <p>
+                    I enjoy working with embedded systems, development
+                    boards and hardware platforms.
+                </p>
+
+                <div>
+                    <span class="skill">Arduino</span>
+                    <span class="skill">ESP32</span>
+                    <span class="skill">Raspberry Pi</span>
+                    <span class="skill">Microcontrollers</span>
+                    <span class="skill">Embedded Systems</span>
+                </div>
+
+                <p>
+                    I like combining software and hardware to create
+                    practical projects and working prototypes.
+                </p>
+            </div>
+
+            <div class="information-box activities">
+                <h2>Activities & Interests</h2>
+
+                <p>
+                    <span class="label">Hiking</span>
+                    I enjoy exploring nature, mountains and new places.
+                </p>
+
+                <p>
+                    <span class="label">Climbing</span>
+                    Climbing gives me a physical and mental challenge.
+                </p>
+
+                <p>
+                    <span class="label">Fitness</span>
+                    I like going to the gym and lifting weights to stay active.
+                </p>
+
+                <p>
+                    <span class="label">Travel</span>
+                    Studying abroad gives me the opportunity to experience
+                    different countries, cultures and people.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div>
+                <h2>Contact Me</h2>
+
+                <p>
+                    <a href="mailto:jasonhuynhle@gmail.com">
+                        jasonhuynhle@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://www.linkedin.com/in/jason-huynh-le"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                    <br>
+
+                    <a href="https://github.com/boolean-jason/Web-Programming"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </p>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
