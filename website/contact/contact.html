@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 0;
+    }
+
+    #navbar {
+      display: flex;
+      background-color: green;
+    }
+
+    #navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbar a {
+      display: block;
+      padding: 14px 18px;
+      color: yellow;
+      font-size: 14px;
+      text-decoration: underline wavy white;
+      text-underline-offset: 4px;
+    }
+
+    #navbar a:hover {
+      background-color: black;
+    }
+
+    #navbar a:active,
+    #navbar a.current {
+      background-color: darkorange;
+      color: white;
+    }
+
+    .content {
+      padding: 15px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+    <ul>
+      <li><a href="../news/news.html">News</a></li>
+    </ul>
+    <ul>
+      <li><a class="current" href="../contact/contact.html">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="../schedule/schedule.html">Schedule</a></li>
+    </ul>
+    <ul>
+      <li><a href="../about/about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h2>Contact</h2>
+    <ul>
+      <li>phone-number: 012-345-6789</li>
+      <li>email: info@example.com</li>
+      <li>address: NTUT Street 1</li>
+    </ul>
+  </div>
+
+</body>
+</html>
