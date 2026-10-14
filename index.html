@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <style>
-    body {
-      margin: 0;
-    }
-
-    #navbar {
-      display: flex;
-      background-color: green;
-    }
-
-    #navbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    #navbar a {
-      display: block;
-      padding: 14px 18px;
-      color: yellow;
-      font-size: 14px;
-      text-decoration: underline wavy white;
-      text-underline-offset: 4px;
-    }
-
-    #navbar a:hover {
-      background-color: black;
-    }
-
-    #navbar a:active,
-    #navbar a.current {
-      background-color: darkorange;
-      color: white;
-    }
-
-    .content {
-      padding: 15px 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo - A City of Contrasts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
+    <header class="topbar">
+        <div class="page">
+            <a class="brand" href="#top">TOKYO.</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav">
+                    <li><a href="#discover">Discover</a></li>
+                    <li><a href="#neighborhoods">Neighborhoods</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <nav id="navbar">
-    <ul>
-      <li><a class="current" href="index.html">Home</a></li>
-    </ul>
-    <ul>
-      <li><a href="news/news.html">News</a></li>
-    </ul>
-    <ul>
-      <li><a href="contact/contact.html">Contact</a></li>
-    </ul>
-    <ul>
-      <li><a href="schedule/schedule.html">Schedule</a></li>
-    </ul>
-    <ul>
-      <li><a href="about/about.html">About</a></li>
-    </ul>
-  </nav>
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="page hero-content">
+                <p class="eyebrow">A visual journey through Japan</p>
+                <h1 id="hero-title">A City of<br>Contrasts.</h1>
+                <div class="accent-line"></div>
+                <p class="hero-description">Quiet temples, electric streets, and little moments in<br class="desktop-break"> between. Discover a different side of Tokyo.</p>
+            </div>
+        </section>
 
-  <div class="content">
-    <h2>Home</h2>
-    <ul>
-      <li>Mousses</li>
-      <li>Pastries
-        <ul>
-          <li>Croissant</li>
-          <li>Milles-feille</li>
-          <li>Palmier</li>
-          <li>Profiteroles</li>
-        </ul>
-      </li>
-      <li>Tarts</li>
-    </ul>
-  </div>
+        <div class="page">
+            <section class="content-section" id="discover">
+                <p class="eyebrow">01 / Discover</p>
+                <h2>Where tradition meets tomorrow.</h2>
+                <div class="two-columns">
+                    <div class="copy">
+                        <h3>More than a destination</h3>
+                        <p>Tokyo is a city that never stops surprising you. One moment, you are surrounded by bright signs and busy crossings. A few streets away, you might discover a quiet shrine hidden between modern buildings.</p>
+                        <p>What makes Tokyo special is the way old and new exist side by side. Every neighborhood has its own rhythm, atmosphere, and story to tell.</p>
+                        <blockquote>“The best way to explore Tokyo is to get a little lost.”</blockquote>
+                    </div>
+                    <figure class="photo wide-photo" tabindex="0">
+                        <img src="images/discover.jpg" alt="A colorful city crossing filled with bright signs and pedestrians">
+                        <figcaption class="overlay"><h3>Electric streets</h3><p>A city that never stops</p></figcaption>
+                    </figure>
+                </div>
+            </section>
 
+            <section class="content-section" id="neighborhoods">
+                <p class="eyebrow">02 / Neighborhoods</p>
+                <h2>Slow down. Look closer.</h2>
+                <div class="two-columns">
+                    <figure class="photo wide-photo" tabindex="0">
+                        <img src="images/neighborhoods.jpg" alt="A traditional street with wooden buildings and a pagoda">
+                        <figcaption class="overlay"><h3>The quieter side</h3><p>Little moments in between</p></figcaption>
+                    </figure>
+                    <div class="copy">
+                        <h3>The quieter side</h3>
+                        <p>Beyond the crowded stations and famous landmarks, Tokyo is full of peaceful corners. Small cafés, traditional shops, and narrow streets invite visitors to take their time.</p>
+                        <p>Spend an afternoon walking without a strict plan. Notice the details: wooden doors, warm lanterns, tiny gardens, and the everyday life happening all around you.</p>
+                        <p>Sometimes the most memorable places are the ones you never planned to visit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section gallery-section" id="gallery">
+                <div class="gallery-heading">
+                    <div><p class="eyebrow">03 / Photo journal</p><h2>Tokyo in three frames.</h2></div>
+                    <p class="gallery-intro">Move your mouse over each photograph to reveal the story behind the image.</p>
+                </div>
+                <div class="gallery">
+                    <figure class="photo gallery-photo" tabindex="0">
+                        <img src="images/modern-tokyo.jpg" alt="Tall city buildings above a wet road at dusk">
+                        <figcaption class="overlay"><h3>Modern Tokyo</h3><p>City of contrasts</p></figcaption>
+                    </figure>
+                    <figure class="photo gallery-photo" tabindex="0">
+                        <img src="images/old-tokyo.jpg" alt="A city view with distant mountains under a soft evening sky">
+                        <figcaption class="overlay"><h3>Old Tokyo</h3><p>Timeless traditions</p></figcaption>
+                    </figure>
+                    <figure class="photo gallery-photo" tabindex="0">
+                        <img src="images/tokyo-after-dark.jpg" alt="A glowing red lantern in a narrow alley at night">
+                        <figcaption class="overlay"><h3>After Dark</h3><p>Lights and little streets</p></figcaption>
+                    </figure>
+                </div>
+                <p class="gallery-note">Hover over a photo to see the fade-in overlay effect.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="page footer-content">
+            <div><h2>Keep exploring.</h2></div>
+            <a href="#top">↑ Back to top</a>
+        </div>
+    </footer>
 </body>
 </html>
