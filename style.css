@@ -26,13 +26,14 @@ a {
 
 h1,
 h2,
-blockquote,
 .brand,
-.overlay h3 {
-    font-family: Georgia, 'Times New Roman', serif;
+.overlay h3,
+.subheading,
+.project-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Navigation links lead to sections on the same page */
+/* Navigation */
 .topbar {
     background: #fffdfa;
 }
@@ -41,13 +42,15 @@ blockquote,
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 43px;
+    gap: 20px;
+    min-height: 50px;
 }
 
 .brand {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: -0.8px;
+    white-space: nowrap;
 }
 
 .nav {
@@ -59,7 +62,7 @@ blockquote,
 }
 
 .nav a {
-    font-size: 7px;
+    font-size: 8px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -74,16 +77,17 @@ a:focus-visible {
     outline-offset: 5px;
 }
 
-/* Hero background and text */
+/* Banner */
 .hero {
-    min-height: 309px;
+    min-height: 330px;
     background:
         linear-gradient(
             90deg,
-            rgba(20, 29, 34, 0.9),
-            rgba(20, 29, 34, 0.25)
+            rgba(20, 29, 34, 0.88),
+            rgba(20, 29, 34, 0.3)
         ),
-        url('images/hero.jpg') center / cover no-repeat;
+        url("pictures/banner.png") center / cover no-repeat;
+    background-color: #27312f;
     color: white;
 }
 
@@ -122,14 +126,31 @@ h1 {
 
 .hero-description {
     margin: 0;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.7;
 }
 
-/* Discover and neighborhoods */
+.hero-link {
+    display: inline-block;
+    margin-top: 22px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c7a1a4;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+
+.hero-link:hover {
+    color: #e5c5c7;
+}
+
+/* Section layout */
 .content-section {
     padding-top: 56px;
     scroll-margin-top: 24px;
+}
+
+.spaced-section {
+    padding-top: 100px;
 }
 
 h2 {
@@ -149,30 +170,23 @@ h2 {
 
 .copy h3 {
     margin: 5px 0 12px;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .copy p {
-    margin: 0 0 12px;
-    font-size: 10px;
-    line-height: 1.65;
-}
-
-blockquote {
-    margin: 10px 0 0;
+    margin: 0 0 14px;
     font-size: 11px;
-    font-style: italic;
-    line-height: 1.6;
+    line-height: 1.75;
 }
 
-#neighborhoods {
-    padding-top: 120px;
+.copy strong {
+    color: #754448;
 }
 
-/* Photo overlays */
+/* Photos and hover effects */
 .photo {
     position: relative;
     margin: 0;
@@ -189,8 +203,12 @@ blockquote {
     transition: filter 0.6s ease, transform 0.6s ease;
 }
 
+.portrait-photo {
+    aspect-ratio: 4 / 5;
+}
+
 .wide-photo {
-    aspect-ratio: 1.5;
+    aspect-ratio: 1.2;
 }
 
 .overlay {
@@ -210,13 +228,13 @@ blockquote {
 
 .overlay h3 {
     margin: 0 0 8px;
-    font-size: 19px;
+    font-size: 23px;
     font-weight: normal;
 }
 
 .overlay p {
     margin: 0;
-    font-size: 6px;
+    font-size: 8px;
     line-height: 1.6;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -238,15 +256,11 @@ blockquote {
     outline-offset: 4px;
 }
 
-/* Travel planner */
-.planner-section {
-    padding-top: 120px;
-}
-
-.planner-intro {
-    margin: 0 0 32px;
-    font-size: 9px;
-    line-height: 1.65;
+/* Food tables */
+.section-intro {
+    margin: 0 0 28px;
+    font-size: 11px;
+    line-height: 1.7;
     color: #655d5d;
 }
 
@@ -254,98 +268,176 @@ blockquote {
     overflow-x: auto;
 }
 
-.travel-table {
+.personal-table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    font-size: 9px;
-    line-height: 1.5;
+    font-size: 10px;
+    line-height: 1.6;
 }
 
-.travel-table th,
-.travel-table td {
+.personal-table caption {
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #655d5d;
+}
+
+.personal-table th,
+.personal-table td {
     border: 1px solid #ecebe5;
-    padding: 11px;
+    padding: 12px;
 }
 
-.travel-table thead th {
+.personal-table thead th {
     background: #27312f;
     color: #fffdfa;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: bold;
     letter-spacing: 0.4px;
 }
 
-.travel-table tbody th {
+.personal-table tbody th {
     background: #eeeee6;
     font-weight: bold;
 }
 
-.travel-table tbody tr:nth-child(even) td {
+.personal-table tbody tr:nth-child(even) td {
     background: #f7f6f0;
 }
 
-.itinerary-table thead th:first-child {
-    width: 18%;
+.food-table thead th:first-child {
+    width: 28%;
 }
 
-.travel-table .disneysea {
+.rating {
+    text-align: center;
+    font-weight: bold;
+    color: #754448;
+    white-space: nowrap;
+}
+
+.personal-table td.favorite-note {
     background: #f5e7dc;
-    color: #a44332;
+    color: #895052;
     text-align: center;
     font-weight: bold;
 }
 
-.budget-title {
-    margin: 48px 0 8px;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 18px;
+.subheading {
+    margin: 40px 0 10px;
+    font-size: 20px;
     font-weight: normal;
 }
 
-.budget-table thead th:first-child {
-    width: 40%;
-}
-
-.budget-table .cost {
-    text-align: right;
-    white-space: nowrap;
-}
-
-/* Three photographs in one row */
-.gallery-section {
-    padding-top: 120px;
+/* Project cards */
+.projects-section {
+    padding-top: 100px;
     padding-bottom: 64px;
 }
 
-.gallery-heading {
+.projects-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
 }
 
-.gallery-intro {
-    width: 160px;
-    font-size: 8px;
+.projects-intro {
+    width: 175px;
+    flex-shrink: 0;
+    font-size: 10px;
     line-height: 1.65;
     margin: 0 0 18px;
+    color: #655d5d;
 }
 
-.gallery {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 11px;
+    gap: 12px;
 }
 
-.gallery-photo {
-    aspect-ratio: 190 / 208;
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 14px;
+    background: #f7f6f0;
+    border: 1px solid #ecebe5;
+    border-top: 3px solid #895052;
+    border-radius: 3px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-note {
-    margin: 12px 0 0;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(51, 42, 42, 0.08);
+}
+
+.project-number {
+    margin: 0 0 14px;
+    font-size: 7px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #754448;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.project-card > p:not(.project-number):not(.project-tags) {
+    margin: 0 0 18px;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.project-card .project-tags {
+    margin: auto 0 0;
+    padding-top: 12px;
+    border-top: 1px solid #dedbd3;
     font-size: 8px;
-    color: #655d5d;
+    line-height: 1.7;
+    color: #754448;
+}
+
+/* Skills */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 16px 0 28px;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 7px 11px;
+    background: #eeeee6;
+    border: 1px solid #e2e0d7;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+.portfolio-link {
+    display: inline-block;
+    padding: 12px 18px;
+    border: 1px solid #27312f;
+    background: #27312f;
+    color: #fffdfa;
+    font-size: 10px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-link:hover {
+    background: #895052;
+    border-color: #895052;
 }
 
 /* Footer */
@@ -358,24 +450,29 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 93px;
+    gap: 20px;
+    min-height: 110px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer h2 {
     font-size: 20px;
-    margin: 0 0 6px;
+    margin: 0 0 8px;
     letter-spacing: -0.3px;
 }
 
 footer p {
-    font-size: 7px;
+    font-size: 9px;
     margin: 0;
+    color: #c3ccc5;
 }
 
 footer a {
     text-transform: uppercase;
-    font-size: 7px;
+    font-size: 8px;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 /* Smaller screens */
@@ -389,12 +486,12 @@ footer a {
     }
 
     .nav {
-        gap: 12px;
+        gap: 14px;
         flex-wrap: wrap;
     }
 
     .nav a {
-        font-size: 8px;
+        font-size: 9px;
         letter-spacing: 0.4px;
     }
 
@@ -410,9 +507,18 @@ footer a {
         font-size: 28px;
     }
 
+    .hero .eyebrow {
+        font-size: 8px;
+        line-height: 1.7;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
     .two-columns {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
     }
 
     .copy p {
@@ -420,48 +526,69 @@ footer a {
     }
 
     .copy h3 {
-        font-size: 10px;
-    }
-
-    blockquote {
-        font-size: 13px;
-    }
-
-    #neighborhoods,
-    .planner-section,
-    .gallery-section {
-        padding-top: 64px;
-    }
-
-    .planner-intro {
         font-size: 11px;
     }
 
-    .travel-table {
+    .spaced-section,
+    .projects-section {
+        padding-top: 64px;
+    }
+
+    .portrait-photo {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .wide-photo {
+        aspect-ratio: 1.3;
+    }
+
+    .section-intro {
+        font-size: 12px;
+    }
+
+    .personal-table {
         min-width: 420px;
         font-size: 11px;
     }
 
-    .travel-table thead th {
+    .personal-table thead th {
         font-size: 10px;
     }
 
-    .gallery-heading {
+    .projects-heading {
         display: block;
     }
 
-    .gallery-intro {
+    .projects-intro {
         width: auto;
-        font-size: 11px;
+        font-size: 12px;
     }
 
-    .gallery {
+    .project-grid {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    .gallery-photo {
-        aspect-ratio: 1;
+    .project-card {
+        padding: 22px;
+    }
+
+    .project-number {
+        font-size: 9px;
+    }
+
+    .project-card h3 {
+        font-size: 24px;
+    }
+
+    .project-card > p:not(.project-number):not(.project-tags) {
+        font-size: 13px;
+    }
+
+    .project-card .project-tags {
+        font-size: 10px;
     }
 
     .overlay h3 {
@@ -472,8 +599,16 @@ footer a {
         font-size: 9px;
     }
 
-    .gallery-note {
-        font-size: 10px;
+    .skill-list li {
+        font-size: 12px;
+    }
+
+    .portfolio-link {
+        font-size: 12px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
     }
 }
 
@@ -484,7 +619,15 @@ footer a {
     }
 
     .photo img,
-    .overlay {
+    .overlay,
+    .project-card,
+    .portfolio-link {
         transition: none;
+    }
+
+    .photo:hover img,
+    .photo:focus img,
+    .project-card:hover {
+        transform: none;
     }
 }
